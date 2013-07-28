@@ -1,0 +1,17 @@
+{
+  "name": "leapmotion",
+  "version": "0.0.1",
+  "description": "leapmotion sample",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "http://github.com/zakuni",
+  "author": "zakuni",
+  "license": "MIT",
+  "devDependencies": {
+    "coffee-script": "~1.6.3",
+    "grunt": "~0.4.1",
+    "jade": "~0.34.1"
+  }
+}
