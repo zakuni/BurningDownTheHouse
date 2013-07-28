@@ -12,6 +12,9 @@
   "devDependencies": {
     "coffee-script": "~1.6.3",
     "grunt": "~0.4.1",
-    "jade": "~0.34.1"
+    "jade": "~0.34.1",
+    "grunt-contrib-watch": "~0.5.1",
+    "grunt-contrib-coffee": "~0.7.0",
+    "grunt-contrib-jade": "~0.7.0"
   }
 }
