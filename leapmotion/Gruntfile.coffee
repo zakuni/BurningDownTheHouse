@@ -2,8 +2,12 @@ module.exports = (grunt)->
   grunt.initConfig
     pkg: grunt.file.readJSON 'package.json'
     watch:
-      files: ['coffee/**/*.coffee']
-      tasks: 'coffee'
+      coffee:
+        files: ['coffee/**/*.coffee']
+        tasks: 'coffee'
+      jade:
+        files: ['*.jade']
+        tasks: 'jade'
     coffee:
       compile:
         files: [
@@ -13,8 +17,18 @@ module.exports = (grunt)->
           dest: 'Resources/'
           ext: '.js'
         ]
+    jade:
+      compile:
+        files: [
+          expand: true
+          cwd: './'
+          src: ['*.jade']
+          dest: './'
+          ext: '.html'
+        ]
 
   grunt.loadNpmTasks 'grunt-contrib-coffee'
+  grunt.loadNpmTasks 'grunt-contrib-jade'
   grunt.loadNpmTasks 'grunt-contrib-watch'
   grunt.registerTask 'default', ['watch']
   return
