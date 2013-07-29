@@ -26,6 +26,8 @@ module.exports = (grunt)->
           dest: './'
           ext: '.html'
         ]
+        options:
+          pretty: true
 
   grunt.loadNpmTasks 'grunt-contrib-coffee'
   grunt.loadNpmTasks 'grunt-contrib-jade'
