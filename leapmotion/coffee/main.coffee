@@ -1,4 +1,4 @@
-controller = new Leap.Controller({enableGestures: true})
+controller = new Leap.Controller()
 
 controller.on('connect', () -> 
   console.log("Successfully connected.")
