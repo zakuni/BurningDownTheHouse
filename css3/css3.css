@@ -4,3 +4,10 @@
   background: red;
   border-radius: 50%;
 }
+
+#oval {
+  width: 200px;
+  height: 100px;
+  background: red;
+  border-radius: 100px / 50%;
+}
