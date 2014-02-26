@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body>
+    <svg id="svg"></svg>
+    <script src="./bower_components/snap.svg/dist/snap.svg-min.js"></script>
+    <script>
+      var s = Snap("#svg");
+      var bigCircle = s.circle(150, 150, 100);
+      bigCircle.attr({
+        fill: "#bada55",
+        stroke: "#000",
+        strokeWidth: 5
+      });
+      bigCircle.drag();
+    </script>
+  </body>
+</html>
