@@ -13,9 +13,8 @@
         stroke: "#000",
         strokeWidth: 5
       });
-      bigCircle.drag();
       var smallCircle = s.circle(100, 150, 70);
-      var discs = s.group(smallCircle, s.circle(100, 150, 70))
+      var discs = s.group(smallCircle, bigCircle)
       discs.drag();
     </script>
   </body>
