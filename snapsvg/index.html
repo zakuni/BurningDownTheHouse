@@ -12,10 +12,18 @@
         fill: "#bada55",
         stroke: "#000",
         strokeWidth: 5
+      }).click(function() {
+        console.log("bigCircle clicked");
       });
       var smallCircle = s.circle(100, 150, 70);
+      smallCircle.click(function() {
+        console.log("smallCircle clicked");
+      });
       var discs = s.group(smallCircle, bigCircle)
       discs.drag();
+      discs.click(function() {
+        console.log("discs clicked");
+      });
     </script>
   </body>
 </html>
