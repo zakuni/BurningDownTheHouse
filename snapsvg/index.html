@@ -17,7 +17,7 @@
       }).drag();
       var smallCircle = paper.circle(100, 150, 70);
       smallCircle.click(function() {
-        console.log("smallCircle clicked");
+        smallCircle.animate({fill: "#999"}, 200);
       }).drag();
       var discs = paper.group(smallCircle, bigCircle);
       discs.click(function() {
