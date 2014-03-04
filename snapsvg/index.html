@@ -6,8 +6,8 @@
     <svg id="svg"></svg>
     <script src="./bower_components/snap.svg/dist/snap.svg-min.js"></script>
     <script>
-      var s = Snap("#svg");
-      var bigCircle = s.circle(150, 150, 100);
+      var paper = Snap("#svg");
+      var bigCircle = paper.circle(150, 150, 100);
       bigCircle.attr({
         fill: "#bada55",
         stroke: "#000",
@@ -15,11 +15,11 @@
       }).click(function() {
         console.log("bigCircle clicked");
       }).drag();
-      var smallCircle = s.circle(100, 150, 70);
+      var smallCircle = paper.circle(100, 150, 70);
       smallCircle.click(function() {
         console.log("smallCircle clicked");
       }).drag();
-      var discs = s.group(smallCircle, bigCircle);
+      var discs = paper.group(smallCircle, bigCircle);
       discs.click(function() {
         console.log("discs clicked");
       });
