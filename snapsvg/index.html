@@ -6,23 +6,43 @@
     <svg id="svg"></svg>
     <script src="./bower_components/snap.svg/dist/snap.svg-min.js"></script>
     <script>
+      var bigger = false;
+      var smaller = false;
       var paper = Snap("#svg");
       var bigCircle = paper.circle(500, 150, 70);
       bigCircle.attr({
         stroke: "#000",
         strokeWidth: 5
       }).click(function() {
-        bigCircle.animate({
-          fill: "#bada55",
-          r: "100"
-        }, 200)
+        if(bigger) {
+          bigCircle.animate({
+            fill: "#000",
+            r: "70"
+          }, 200);
+          bigger = false;
+        } else {
+          bigCircle.animate({
+            fill: "#bada55",
+            r: "100"
+          }, 200);
+          bigger = true;
+        }
       }).drag();
       var smallCircle = paper.circle(100, 150, 70);
       smallCircle.click(function() {
-        smallCircle.animate({
-          fill: "#999",
-          r: "20"
-        }, 200);
+        if(smaller) {
+          smallCircle.animate({
+            fill: "#000",
+            r: "70"
+          }, 200);
+          smaller = false;
+        } else {
+          smallCircle.animate({
+            fill: "#999",
+            r: "20"
+          }, 200);
+          smaller = true;
+        }
       }).drag();
       var discs = paper.group(smallCircle, bigCircle);
       discs.click(function() {
